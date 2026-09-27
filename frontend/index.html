@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Feedback Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+        <h2>
+            <i class="fa-solid fa-comments"></i>
+            Customer Feedback Management System
+        </h2>
+
+        <div class="nav-buttons">
+
+            <button onclick="window.location.href='index.html'">
+                <i class="fa-solid fa-house"></i> Dashboard
+            </button>
+
+            <button onclick="window.location.href='customers.html'">
+                <i class="fa-solid fa-users"></i> Customers
+            </button>
+
+            <button onclick="window.location.href='products.html'">
+                <i class="fa-solid fa-box"></i> Products
+            </button>
+
+            <button onclick="window.location.href='reports.html'">
+                <i class="fa-solid fa-file-lines"></i> Reports
+            </button>
+
+            <button onclick="window.location.href='charts.html'">
+                <i class="fa-solid fa-chart-column"></i> Charts
+            </button>
+
+            <button onclick="logout()">
+                <i class="fa-solid fa-right-from-bracket"></i> Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Dashboard Cards -->
+    <div class="dashboard">
+
+        <div class="card">
+            <h3>Total Feedback</h3>
+            <h1 id="total">0</h1>
+        </div>
+
+        <div class="card positive">
+            <h3>Positive</h3>
+            <h1 id="positive">0</h1>
+        </div>
+
+        <div class="card negative">
+            <h3>Negative</h3>
+            <h1 id="negative">0</h1>
+        </div>
+
+        <div class="card neutral">
+            <h3>Neutral</h3>
+            <h1 id="neutral">0</h1>
+        </div>
+
+    </div>
+
+
+    <!-- Feedback Form -->
+    <div class="container">
+
+        <h2>Add Feedback</h2>
+
+        <form id="feedbackForm">
+
+            <!-- Customer Dropdown -->
+            <select id="customer_id" required>
+
+                <option value="">
+                    Select Customer
+                </option>
+
+            </select>
+
+
+            <!-- Product Dropdown -->
+            <select id="product_id" required>
+
+                <option value="">
+                    Select Product
+                </option>
+
+            </select>
+
+
+            <!-- Feedback -->
+            <textarea
+                id="feedback_text"
+                placeholder="Enter Feedback"
+                required></textarea>
+
+
+            <!-- Sentiment -->
+            <select id="sentiment" required>
+
+                <option value="Positive">
+                    Positive
+                </option>
+
+                <option value="Negative">
+                    Negative
+                </option>
+
+                <option value="Neutral">
+                    Neutral
+                </option>
+
+            </select>
+
+
+            <button type="submit">
+                Submit Feedback
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- Feedback Records -->
+    <div class="container">
+
+        <h2>Feedback Records</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search feedback...">
+
+        <br><br>
+
+
+        <table id="feedbackTable">
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Customer</th>
+
+                    <th>Product</th>
+
+                    <th>Feedback</th>
+
+                    <th>Sentiment</th>
+
+                    <th>Edit</th>
+
+                    <th>Delete</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

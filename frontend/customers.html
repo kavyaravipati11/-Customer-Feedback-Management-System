@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Customers</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- ========================= -->
+    <!-- CUSTOMER MANAGEMENT -->
+    <!-- ========================= -->
+
+    <h1>Customer Management</h1>
+
+
+    <!-- ========================= -->
+    <!-- ADD CUSTOMER -->
+    <!-- ========================= -->
+
+    <div class="form-box">
+
+        <h2>Add Customer</h2>
+
+
+        <form id="customerForm">
+
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Customer Name"
+                required>
+
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required>
+
+
+            <input
+                type="text"
+                id="country"
+                placeholder="Country"
+                required>
+
+
+            <button type="submit">
+                Add Customer
+            </button>
+
+
+        </form>
+
+    </div>
+
+
+    <hr>
+
+
+    <!-- ========================= -->
+    <!-- CUSTOMER LIST -->
+    <!-- ========================= -->
+
+    <h2>Customer List</h2>
+
+
+    <table
+        border="1"
+        width="100%"
+        id="customerTable">
+
+
+        <thead>
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Name</th>
+
+                <th>Email</th>
+
+                <th>Country</th>
+
+                <th>Actions</th>
+
+            </tr>
+
+        </thead>
+
+
+        <tbody id="customerTableBody">
+
+        </tbody>
+
+
+    </table>
+
+
+</div>
+
+
+<script src="customers.js"></script>
+
+
+</body>
+
+</html>

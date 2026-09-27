@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Charts</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <h2>Customer Feedback Charts</h2>
+
+        <div class="nav-buttons">
+
+            <button onclick="window.location.href='index.html'">
+                Dashboard
+            </button>
+
+            <button onclick="window.location.href='reports.html'">
+                Reports
+            </button>
+
+            <button onclick="window.location.href='charts.html'">
+                Charts
+            </button>
+
+        </div>
+
+    </nav>
+
+    <div class="container">
+
+        <h2>Feedback Sentiment Analysis</h2>
+
+        <canvas id="pieChart"></canvas>
+
+    </div>
+
+    <div class="container">
+
+        <h2>Product Wise Feedback</h2>
+
+        <canvas id="barChart"></canvas>
+
+    </div>
+
+    <script src="charts.js"></script>
+
+</body>
+</html>
